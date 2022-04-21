@@ -24,3 +24,37 @@ Additional considerations:
     -   What needs to live in a persistence layer?
 -   Is there some state we need to initialize?
 -   Ask: should any of this work be abstracted into functions? (i.e., is the work complicated? can it be reused?)
+index.html
+1 <title>All about me</title>
+2<section id="my-info">
+3<h1>Hi, Im <span id="name">____</span></h1>
+4<p><strong>I use he/him pronouns</strong></p>
+5<p><strong>I live in Portland Or.</strong></p>
+6<button id="button"> Change Name</button></section>
+7<section id="animal-style">
+8<p><strong>My Favorite animal is?</strong></p>
+9 <div id="animal-div" class="hidden">
+10 <img src="https://www.sadanduseless.com/wp-content/uploads/2020/10/funny-trash-pandas6.jpg">
+11</div>
+12<button id="animal button">Show Animal</button>
+13</section>
+
+app.js
+1 const Button = document.getElementById('button');
+2 const nameEL = document.getElementById('name');
+3 const SectionElement = document.getElementById('my-info');
+4 const animalDiv = document.getElementById('animal-div');
+5 const animalButton = document.getElementById('animal button');
+6 Button.addEventListener('click', () => {
+7 if (nameEL.textContent === '____') {
+8 nameEL.textContent = 'Daniel';
+9 } else {
+10 nameEL.textContent = '____';
+11  }
+    SectionElement.classlist.toggle('my-info');
+});
+12 animalButton.addEventListener('click', () => {
+    animalDiv.classList.remove('hidden');
+    console.log(animalButton);
+});
+console.log(animalButton);
